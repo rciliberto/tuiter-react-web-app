@@ -1,0 +1,53 @@
+.wd-bg-black {
+    background-color: black;
+}
+
+.wd-tuiter-width {
+    width: 575px;
+}
+
+.wd-bg-gray {
+    background-color: rgb(33, 35, 35);
+}
+
+.wd-border-gray {
+    border-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-border-gray-left-right {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-border-gray-bottom {
+    border-bottom-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-border-gray-top {
+    border-top-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-fit-content-width {
+    width: fit-content;
+}
+
+.wd-block {
+    display: block;
+}
+
+.wd-tuit-page {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.wd-spacer {
+    height: 16px;
+}
+
+.float-left {
+    float: left;
+}
