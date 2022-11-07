@@ -1,0 +1,44 @@
+[
+  {
+    "_id": 345,
+    "topic": "Space",
+    "userName": "SpaceX",
+    "time": "2h",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "image": "Tesla.jpg",
+    "liked": true,
+    "replies": 123,
+    "retuits": 432,
+    "likes": 2345,
+    "handle": "@spacex",
+    "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+  },
+  {
+    "_id": 234,
+    "topic": "Space",
+    "userName": "Nasa",
+    "time": "4d",
+    "title": "New Galaxy",
+    "image": "NASA_logo.svg.png",
+    "liked": false,
+    "replies": 23,
+    "retuits": 63,
+    "likes": 142,
+    "handle": "@NASA",
+    "tuit": "Oh my goodness, we discovered a new galaxy that we can go to right now! lets go there immediately! That would be a lot of fun."
+  },
+  {
+    "_id": 456,
+    "topic": "Tesla",
+    "userName": "Tesla",
+    "time": "5d",
+    "title": "Tesla builds new car",
+    "image": "Tesla.jpg",
+    "liked": true,
+    "replies": 9664,
+    "retuits": 1008,
+    "likes": 17964,
+    "handle": "@Tesla",
+    "tuit": "Hey its me, Elon! I just bought Tuiter and to celebrate I am proud to announce our new Tesla Automated Tuiter car! Leave a reply and you'll be in the drawing for a free car."
+  }
+]
