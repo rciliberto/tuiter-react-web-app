@@ -12,6 +12,7 @@ import PostSummaryList from "../tuiter/post-summary-list";
 import ExploreComponent from "../tuiter/explore";
 import TuitItem from "../tuiter/tuit-list/tuit-item";
 import TuitStats from "../tuiter/tuit-list/tuit-stats";
+import Tuiter from "../tuiter";
 
 const ComponentPreviews = () => {
   return (
@@ -48,6 +49,9 @@ const ComponentPreviews = () => {
       </ComponentPreview>
       <ComponentPreview path="/TuitStats">
         <TuitStats/>
+      </ComponentPreview>
+      <ComponentPreview path="/Tuiter">
+        <Tuiter/>
       </ComponentPreview>
     </Previews>
   );

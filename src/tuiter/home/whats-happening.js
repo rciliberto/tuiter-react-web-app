@@ -1,21 +1,32 @@
-import {createTuit} from "../tuits/tuits-reducer";
 import {useDispatch} from "react-redux";
 import {useState} from "react";
+import {createTuitThunk}
+  from "../../services/tuits-thunks";
+
+const user = {
+  image: 'NASA_logo.svg.png',
+  userName: 'NASA',
+  handle: '@NASA'
+}
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState('');
   const dispatch = useDispatch();
   const tuitClickHandler = () => {
     const newTuit = {
-      tuit: whatsHappening
+      tuit: whatsHappening,
+      image: user.image,
+      userName: user.userName,
+      handle: user.handle,
+      time: 'just now'
     }
-    dispatch(createTuit(newTuit));
+    dispatch(createTuitThunk(newTuit));
   }
 
   return (
     <div className="row">
       <div className="col-auto">
-        <img src="/images/NASA_logo.svg.png" width={60}/>
+        <img src={"/images/" + user.image} width={60}/>
       </div>
       <div className="col-10">
        <textarea value={whatsHappening} placeholder="What's happening?"

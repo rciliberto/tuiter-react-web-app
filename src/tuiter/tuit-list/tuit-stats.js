@@ -1,4 +1,6 @@
 import React from "react";
+import {updateTuitThunk} from "../../services/tuits-thunks";
+import {useDispatch} from "react-redux";
 const TuitStats = (
   {
     tuit = {
@@ -17,20 +19,42 @@ const TuitStats = (
     }
   }
 ) => {
+  const dispatch = useDispatch();
   return(
     <div className="row">
-      <div className="col-3">
+      <div className="col-2">
         <i className="bi bi-chat"/> {tuit.replies}
       </div>
-      <div className="col-3">
+      <div className="col-2">
         <i className="bi bi-arrow-clockwise"/> {tuit.retuits}
       </div>
       <div className="col-3">
         {tuit.liked ?
-          <i className="bi bi-heart-fill" style={{color: "red"}}/> :
-          <i className="bi bi-heart"/>} {tuit.likes}
+          <i onClick={() => dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.likes - 1,
+            liked: false
+          }))} className="bi bi-heart-fill" style={{color: "red"}}/> :
+          <i onClick={() => dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.likes + 1,
+            liked: true
+          }))} className="bi bi-heart"/>} {tuit.likes}
       </div>
       <div className="col-3">
+        {tuit.disliked ?
+          <i onClick={() => dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.dislikes - 1,
+            disliked: false
+          }))} className="bi bi-hand-thumbs-down-fill" style={{color: "blue"}}/> :
+          <i onClick={() => dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.dislikes + 1,
+            disliked: true
+          }))} className="bi bi-hand-thumbs-down"/>} {tuit.dislikes}
+      </div>
+      <div className="col-2">
         <i className="bi bi-share"/>
       </div>
     </div>
