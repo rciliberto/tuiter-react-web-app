@@ -50,7 +50,7 @@ const TuitStats = (
           }))} className="bi bi-hand-thumbs-down-fill" style={{color: "blue"}}/> :
           <i onClick={() => dispatch(updateTuitThunk({
             ...tuit,
-            dislikes: tuit.dislikes + 1,
+            dislikes: tuit.dislikes ? tuit.dislikes + 1 : 1,
             disliked: true
           }))} className="bi bi-hand-thumbs-down"/>} {tuit.dislikes}
       </div>
